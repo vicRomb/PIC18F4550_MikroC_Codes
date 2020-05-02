@@ -1,12 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////||
-/////////////////////////////////////////////////////////////////////////////||
-// Benem閞ita Universidad Aut髇oma de Puebla                                 ||
-// Facultad de Ciencias de la Electr髇ica                                    ||
-// Maestr韆 en Ingenieria Electronica, Opcion Instrumentaci髇 Electr髇ica    ||
-// Asignatura: Sistemas programables                                         ||
-// Profesor:   Nicol醩 Quiroz Hern醤dez                                      ||
-// Equipo 3:   Victor Romero Bautista, 219470611 Y                           ||
-//             Narciso Ariel Ramirez Tecuatl, 219470609                      ||
+/////////////////////////////////////////////////////////////////////////////||                                      ||
+// Autor:      Victor Romero Bautista                                        ||
 // Nombre:     Control de motor a pasos con smartphone                       ||
 // Fecha:      29-Abril-2020                                                 ||
 /////////////////////////////////////////////////////////////////////////////||
@@ -30,11 +24,11 @@ sbit LCD_D7_Direction at TRISB7_bit;
 
 char dato;  // Variable
 
-// Funci髇 de Ratardo 10ms
+// Funci贸n de Ratardo 10ms
 void Move_Delay() {
   Delay_ms(10);
 }
-// Funci髇 para mover eje del motor en sentido Horario
+// Funci贸n para mover eje del motor en sentido Horario
 void Giro_Horario()
 {
   PORTD = 0x80;
@@ -46,7 +40,7 @@ void Giro_Horario()
   PORTD = 0x10;
   Move_Delay();
 }
-// Funci髇 para mover eje del motor en sentido Antihorario
+// Funci贸n para mover eje del motor en sentido Antihorario
 void Giro_Anti()
 {
   PORTD = 0x10;
@@ -59,7 +53,7 @@ void Giro_Anti()
   Move_Delay();
 }
 
-// Funci髇 para escribir en el LCD
+// Funci贸n para escribir en el LCD
 void LCD_1()
 {
   Lcd_Out(1,1,"Motor a pasos");
@@ -67,7 +61,7 @@ void LCD_1()
 }
 
 void main(){
- // Configuraci髇 de  puertos de en/sal
+ // Configuraci贸n de  puertos de en/sal
   PORTD = 0x00; // Comienza la salidas de puerto D en bajo
   TRISD = 0x00; // Puerto D como salida
  // Inicializar componentes
